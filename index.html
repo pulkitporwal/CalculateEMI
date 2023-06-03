@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator - Career Pandas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loan-calculator">
+        <div class="top">
+            <h2>EMI Calculator</h2>
+            <form action="#">
+                <div class="input-field">
+                    <div class="title">Amount</div>
+                    <input type="number" id="loan-amount"
+                        onkeyup="amountInput = parseFloat(document.getElementById('loan-amount').value)" required>
+                </div>
+                <div class="input-field">
+                    <div class="title">Interest rate</div>
+                    <input type="number" id="loan-interest"
+                        onkeyup="interestInput = parseFloat(document.getElementById('loan-interest').value);" required>
+                </div>
+                <div class="input-field">
+                    <div class="title">Tennure (in Months)</div>
+                    <input type="number" id="loan-tennure"
+                        onkeyup="tenureInput = parseFloat(document.getElementById('loan-tennure').value);" required>
+                </div>
+            </form>
+        </div>
+        <div class="result">
+            <div class="left">
+                <h2 class="loan-emi">Loan EMI</h2>
+                <div id="loan-emi" class="value">00</div>
+                <hr>
+                <h2 class="loan-emi">Total interest Payable</h2>
+                <div id="loan-total-interest" class="value">000</div>
+                <hr>
+                <h2 class="loan-emi">Total Amount</h2>
+                <div id="loan-total-amount" class="value">0000</div>
+
+                <button id="Calculate-btn" onclick="init()">Calculate</button>
+            </div>
+            <div class="right">
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyD36_nh4FaCZIDH78etyADoyMqMmcxM5AI",
+          authDomain: "calculate-emi.firebaseapp.com",
+          projectId: "calculate-emi",
+          storageBucket: "calculate-emi.appspot.com",
+          messagingSenderId: "395493794546",
+          appId: "1:395493794546:web:a65e1bc840aaabf95da66b"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+</body>
+
+</html>

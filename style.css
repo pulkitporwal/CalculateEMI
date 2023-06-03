@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.loan-calculator{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0 12px 50px -11px rgba(0, 0, 0, 0.2);
+    border-radius:20px ;
+    color:#14213d;
+    height: fit-content;
+}
+.top {
+    background-color: #14213d;
+    border-radius:20px ;
+    color: #fff;
+    padding: 35px 15px;
+    width: 100%;
+}
+.loan-calculator .top h2{
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+form{   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+input{
+    background-color: #fff;
+    width: 190px;
+    height: 31px;
+    padding: 0 10px;
+}
+input:nth-child(2){
+    margin: 0 20px;
+}
+.title{
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+.loan-calculator .result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.loan-calculator .result div canvas{
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+}
+.loan-calculator .result .left{
+    padding: 25px;
+}
+.loan-calculator .result .right{
+    flex: 1;
+}
+hr{
+    width: 100px;
+    height: 1px;
+    background-color: #292626;
+    outline :none;
+    margin: 8px 0;
+    border: none;
+}
+.value::before{
+    content: '₹';
+    margin-right: 5px;
+}
+
+#Calculate-btn{
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 24px;
+    padding: 8px 24px;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width : 715px){
+    
+    form{
+        flex-direction: column  ;
+    }
+    .loan-calculator .result{
+        flex-direction: column;
+    }
+    body{
+        align-items: none;
+    }
+}
